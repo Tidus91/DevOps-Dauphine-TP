@@ -99,11 +99,19 @@ Wordpress dispose d'une image Docker officielle disponible sur [DockerHub](https
         - `WORDPRESS_DB_HOST=0.0.0.0`
    3. Construire l'image docker.
    4. Lancer une instance de l'image, ouvrez un shell. Vérifier le résultat de la commande `echo $WORDPRESS_DB_PASSWORD`
+  
+  <img width="776" alt="image" src="https://github.com/user-attachments/assets/5352bdeb-628e-4d12-9d77-d27895d61e05" />
+
 
 6. Pipeline d'Intégration Continue (CI):
    1. Créer un dépôt de type `DOCKER` sur artifact registry (si pas déjà fait, sinon utiliser celui appelé `website-tools`)
    2. Créer une configuration cloudbuild pour construire l'image docker et la publier sur le depôt Artifact Registry
    3. Envoyer (`submit`) le job sur Cloud Build et vérifier que l'image a bien été créée
+  
+   <img width="1074" alt="image" src="https://github.com/user-attachments/assets/4f051b89-1b39-4389-8a4c-33d0e7359995" />
+   <img width="1272" alt="image" src="https://github.com/user-attachments/assets/46877344-7be6-4489-bfc8-b65158da5447" />
+
+
 
 ## Partie 3 : Déployer Wordpress sur Cloud Run puis Kubernetes 🔥
 
