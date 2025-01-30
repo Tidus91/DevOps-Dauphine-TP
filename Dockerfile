@@ -5,7 +5,11 @@ FROM wordpress:latest
 ENV WORDPRESS_DB_USER=wordpress
 ENV WORDPRESS_DB_PASSWORD=ilovedevops
 ENV WORDPRESS_DB_NAME=wordpress
-ENV WORDPRESS_DB_HOST=0.0.0.0
+ENV WORDPRESS_DB_HOST=34.28.125.190
 
 # Exposer le port 80 (utilisé par Apache)
-EXPOSE 80
+ENV PORT 8080
+EXPOSE 8080
+
+# Configurer WordPress pour écouter sur le port 8080
+CMD ["sh", "-c", "docker-entrypoint.sh php-fpm && docker-entrypoint.sh apache2-foreground --port 8080"]
