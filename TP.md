@@ -62,20 +62,31 @@ Wordpress dispose d'une image Docker officielle disponible sur [DockerHub](https
 
 2. Lancer l'image docker et ouvrez un shell à l'intérieur de votre container:
    1. Quel est le répertoire courant du container (WORKDIR) ?
-   2. Quelles sont les différents fichiers html contenu dans WORKDIR ?
+      le répertoire courant du container est /var/www/html
+   3. Quelles sont les différents fichiers html contenu dans WORKDIR ?
+      <img width="454" alt="image" src="https://github.com/user-attachments/assets/a7d7b543-527f-45fa-8cb7-b6fdc3c669ba" />
+      voila les fichiers, on a seulement readme.html comme extension .html
+
 
 3. Supprimez le container puis relancez en un en spécifiant un port binding (une correspondance de port).
 
    1. Vous devez pouvoir communiquer avec le port par défaut de wordpress : **80** (choisissez un port entre 8000 et 9000 sur votre machine hôte => cloudshell)
 
    2. Avec la commande `curl`, faites une requêtes depuis votre machine hôte à votre container wordpress. Quelle est la réponse ? (il n'y a pas piège, essayez sur un port non utilisé pour constater la différence)
+  Je n'ai pas de réponse.
 
-   3. Afficher les logs de votre container après avoir fait quelques requêtes, que voyez vous ?
-   4. Utilisez l'aperçu web pour afficher le résultat du navigateur qui se connecte à votre container wordpress
+   4. Afficher les logs de votre container après avoir fait quelques requêtes, que voyez vous ?
+  <img width="1038" alt="image" src="https://github.com/user-attachments/assets/17df6b31-53e9-4ec1-8f9b-1b206391879a" />
+  on voit des requetes http de type get.
+  des messages du serveur apache
+
+   6. Utilisez l'aperçu web pour afficher le résultat du navigateur qui se connecte à votre container wordpress
       1. Utiliser la fonction `Aperçu sur le web`
         ![web_preview](images/wordpress_preview.png)
       2. Modifier le port si celui choisi n'est pas `8000`
       3. Une fenètre s'ouvre, que voyez vous ?
+     <img width="1280" alt="image" src="https://github.com/user-attachments/assets/8fb109c4-12d1-46f5-87d1-20ba694dbc9b" />
+      je vois une page html avec une liste deroulante pour choisir la langue.
 
 4. A partir de la documentation, remarquez les paramètres requis pour la configuration de la base de données.
 
