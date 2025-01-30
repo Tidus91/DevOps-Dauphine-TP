@@ -49,6 +49,10 @@ Nous allons créer les ressources suivantes à l'aide de Terraform :
 4. Lancer `terraform plan`, vérifier les changements puis appliquer les changements avec `terraform apply`
 5. Vérifier que notre utilisateur existe bien : https://console.cloud.google.com/sql/instances/main-instance/users (veiller à bien séléctionner le projet GCP sur lequel vous avez déployé vos ressources)
 6. Rendez-vous sur https://console.cloud.google.com/sql/instances/main-instance/databases. Quelles sont les base de données présentes sur votre instance `main-instance` ? Quels sont les types ?
+<img width="914" alt="image" src="https://github.com/user-attachments/assets/bba6d99c-c37e-4f4e-9782-b94f2fec6826" />
+On a 5 base de données, 4 sont des bases système (type système) utilisé par mysql pour la gestion interne.
+La base wordpress est de type utilisateur que nous avons créer pour notre application
+
 
 ## Partie 2 : Docker
 
